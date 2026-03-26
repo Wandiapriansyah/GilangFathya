@@ -5099,3 +5099,100 @@ section.person .person-name.small {
     line-height: 1.4;
     color: var(--text-primary);
 }
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.radio-btn {
+    position: relative;
+    cursor: pointer;
+    color: #365635;
+}
+
+.radio-btn input {
+    display: none;
+}
+
+/* style tombol */
+.radio-btn span {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #365635;
+    color: #365635;
+    font-family: "Linden Hill", serif;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* hover */
+.radio-btn span:hover {
+    background: #365635;
+    color: white;
+}
+
+/* saat dipilih */
+.radio-btn input:checked + span {
+    background: #365635;
+    color: white;
+    border-color: #365635;
+}
+
+.radio-btn input:checked + span {
+    background: var(--text-secondary);
+    border-color: var(--text-secondary);
+}
+
+.qty-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* tombol + dan - */
+.qty-box button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--button-background-secondary);
+    background-color: transparent;
+    color: var(--text-primary);
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+/* tombol + (lebih menonjol) */
+.qty-box button:last-child {
+    background-color: var(--button-background-secondary);
+    color: var(--button-text-secondary);
+}
+
+/* hover effect */
+.qty-box button:hover {
+    border-color: rgba(var(--button-background-secondary-rgb), .7);
+}
+
+.qty-box button:last-child:hover {
+    background-color: rgba(var(--button-background-secondary-rgb), .7);
+}
+
+/* input jumlah */
+.qty-box input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-top: 1px solid var(--text-primary);
+    border-bottom: 1px solid var(--text-primary);
+    background: transparent;
+    font-family: var(--body-text-family);
+    font-size: var(--body-text-size);
+    color: var(--text-primary);
+    pointer-events: none;
+}

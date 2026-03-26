@@ -2508,6 +2508,154 @@
 
             <!-- KADO AMPLOP -->
 
+            <!-- RSVP -->
+            <section class="wedding-wish-wrap" data-template="">
+
+                <div class="wedding-wish-inner">
+
+                    <div class="ornaments-wrapper">
+                        <div class="orn-wish-top">
+                            <div class="image-wrap" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
+                                <img src="asset/media/template/exclusive/irish/original/Orn-24-min.png" alt="">
+                            </div>
+                        </div>
+                        <div class="orn-wish-1 left">
+                            <div class="image-wrap" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="550">
+                                <img src="asset/media/template/exclusive/irish/original/Orn-11-min.png" alt="">
+                            </div>
+                        </div>
+                        <div class="orn-wish-1 right">
+                            <div class="image-wrap" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="550">
+                                <img src="asset/media/template/exclusive/irish/original/Orn-11-min.png" alt="">
+                            </div>
+                        </div>
+                        <div class="orn-wish-2 left">
+                            <div class="image-wrap" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="600">
+                                <img src="asset/media/template/exclusive/irish/original/Orn-10-min.png" alt="">
+                            </div>
+                        </div>
+                        <div class="orn-wish-2 right">
+                            <div class="image-wrap" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="600">
+                                <img src="asset/media/template/exclusive/irish/original/Orn-10-min.png" alt="">
+                            </div>
+                        </div>
+                        <div class="orn-wish-3 left">
+                            <div class="image-wrap" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="650">
+                                <img src="asset/media/template/exclusive/irish/original/Orn-27-min.png" alt="">
+                            </div>
+                        </div>
+                        <div class="orn-wish-3 right">
+                            <div class="image-wrap" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="650">
+                                <img src="asset/media/template/exclusive/irish/original/Orn-27-min.png" alt="">
+                            </div>
+                        </div>
+                        <div class="orn-wish-3-2 left">
+                            <div class="image-wrap" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="700">
+                                <img src="asset/media/template/exclusive/irish/original/Orn-28-min.png" alt="">
+                            </div>
+                        </div>
+                        <div class="orn-wish-3-2 right">
+                            <div class="image-wrap" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="700">
+                                <img src="asset/media/template/exclusive/irish/original/Orn-28-min.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wedding-wish-head">
+                        <h1 class="wedding-wish-title" data-aos="fade-up" data-aos-duration="1200">RSVP</h1>
+                    </div>
+
+                    <div class="wedding-wish-body">
+
+                        <div class="wedding-wish-form">
+                            <form action="#" class="" method="POST" id="RSVP">
+                                <div class="form-group guest-name-wrap " data-aos="fade-up" data-aos-duration="1200"
+                                    data-aos-delay="200">
+                                    <input type="text" name="name" class="form-control guest-name" placeholder="Name"
+                                        value="">
+                                </div>
+                                
+                                <div class="form-group guest-name-wrap " data-aos="fade-up" data-aos-duration="1200"
+                                    data-aos-delay="200">
+                                    <input type="number" name="noHp" class="form-control guest-name" placeholder="Phone Number" value="">
+                                </div>
+                                
+                                <div>
+                                    <p style="color: #365635; font-size: 18px;">Konfirmasi Kehadiran</p>
+                                </div>
+
+                                <div class="form-group guest-name-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+
+                                    <div class="radio-group">
+
+                                        <label class="radio-btn">
+                                            <input type="radio" name="attendance" value="Hadir" onclick="toggleJumlah(true)">
+                                            <span>Hadir</span>
+                                        </label>
+
+                                        <label class="radio-btn">
+                                            <input type="radio" name="attendance" value="Tidak Hadir" onclick="toggleJumlah(false)">
+                                            <span>Tidak Hadir</span>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Jumlah orang -->
+                                <div class="form-group guest-name-wrap" id="jumlahOrangWrap" style="display:none; margin-top:10px;">
+                                    <p style="color: #365635; font-size: 18px; text-align: center;">Jumlah Orang yang Akan Hadir</p>
+
+                                    <div class="qty-box">
+                                        <button type="button" onclick="kurang()">-</button>
+                                        <input type="number" id="jumlahOrang" name="jumlah_orang" value="1" min="1" readonly>
+                                        <button type="button" onclick="tambah()">+</button>
+                                    </div>
+                                </div>
+
+<script>
+function toggleJumlah(show) {
+    const jumlahWrap = document.getElementById('jumlahOrangWrap');
+    jumlahWrap.style.display = show ? 'block' : 'none';
+}
+
+// tambah jumlah
+function tambah() {
+    let input = document.getElementById('jumlahOrang');
+    input.value = parseInt(input.value) + 1;
+}
+
+// kurang jumlah (min 1)
+function kurang() {
+    let input = document.getElementById('jumlahOrang');
+    if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+    }
+}
+</script>                                
+
+                                <div class="submit-comment-wrap" data-aos="fade-up" data-aos-duration="1200"
+                                    data-aos-delay="400">
+                                    <button type="submit" class="submit submit-comment" data-last="">Send</button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <div class="comment-wrap">
+                            <!-- COMMENTS -->
+
+                        </div>
+
+                        <div class="more-comment-wrap" data-aos="fade-up" data-aos-duration="1200">
+                            <button type="button" id="moreComment" data-template="" data-start="0"
+                                data-load-text="Loading">Show more comments</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
 
             <!-- WEDDING GIFT -->
             <section class="wedding-gift-wrap ">
